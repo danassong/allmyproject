@@ -18,7 +18,7 @@
  			dust_text = "적당해요 환기시켜도 나쁘진 않아요"
  		} else if (parseInt(dataE3) <= 75){
  			dust_text = "공기 나빠요 마스크 챙기세요!"
- 		} else (parseInt(dataE3) > 76){
+ 		} else if (parseInt(dataE3) > 76){
  			dust_text = "최악이에요 마스크 꼭 쓰고 웬만하면 외출 자제하세요!"
  		}
  		document.getElementById('dust').innerHTML = "현재 미세먼지: " + dataE3 + dust_text

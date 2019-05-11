@@ -28,6 +28,7 @@
 		} else (parseInt(dataE3) > 76){
 			dust_text = "최악이에요 마스크 꼭 쓰고 웬만하면 외출 자제하세요!"
 		}
+		document.getElementById('dust').innerHTML = "현재 미세먼지: " + dataE3 + dust_text
 	}
 </script>
 <script src="https://spreadsheets.google.com/feeds/cells/1JFXuZ-9FBg9aJEU1HOopKSLl3dnD2NI6UJ7XtBr2h3Q/2/public/basic?alt=json-in-script&callback=onDataLoaded"></script>

@@ -1,0 +1,14 @@
+<html>
+<head>
+	<title>dustinfo</title>
+</head>
+<bodystyle="font-size:20px">
+	<a href="index.html"><div class="buttons" style="width: 50px; height: 30px; top: 10px; left: 20px">HOME</div></a>
+	<div id='dust'></div>
+</body>
+
+<script>
+	const onDataLoaded = (data) => {
+		// 미세먼지
+		const dataE3 = data.feed.entry.find((entry) => entry.title.$t == 'E3').content.$t
+		document.getElementById('dust').innerHTML = "현재 미세먼지: " + dataE3

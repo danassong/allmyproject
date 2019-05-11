@@ -4,13 +4,6 @@
 </head>
 <bodystyle="font-size:20px">
 	<a href="index.html"><div class="buttons" style="width: 50px; height: 30px; top: 10px; left: 20px">HOME</div></a>
-	<div id='dust'></div>
-	<div id='temp'></div>
-	<div id='humidity'></div>
-	<div id='sky'></div>
-	<div id='rain'></div>
-	<div id='wind1'></div>
-	<div id='wind2'></div>
 </body>
 
 <script>
@@ -19,16 +12,16 @@
 		const dataE3 = data.feed.entry.find((entry) => entry.title.$t == 'E3').content.$t
 		document.getElementById('dust').innerHTML = "현재 미세먼지: " + dataE3
 		var dust_text
-		if (parseInt(dataE3) <= 15){
-			dust_text = "오늘 공기 좋아요! 맑은 공기 많이 마셔요"
-		} else if (parseInt(dataE3) <= 35){
-			dust_text = "적당해요 환기시켜도 나쁘진 않아요"
-		} else if (parseInt(dataE3) <= 75){
-			dust_text = "공기 나빠요 마스크 챙기세요!"
-		} else (parseInt(dataE3) > 76){
-			dust_text = "최악이에요 마스크 꼭 쓰고 웬만하면 외출 자제하세요!"
-		}
-		document.getElementById('dust').innerHTML = "현재 미세먼지: " + dataE3 + dust_text
+// 		if (parseInt(dataE3) <= 15){
+// 			dust_text = "오늘 공기 좋아요! 맑은 공기 많이 마셔요"
+// 		} else if (parseInt(dataE3) <= 35){
+// 			dust_text = "적당해요 환기시켜도 나쁘진 않아요"
+// 		} else if (parseInt(dataE3) <= 75){
+// 			dust_text = "공기 나빠요 마스크 챙기세요!"
+// 		} else (parseInt(dataE3) > 76){
+// 			dust_text = "최악이에요 마스크 꼭 쓰고 웬만하면 외출 자제하세요!"
+// 		}
+// 		document.getElementById('dust').innerHTML = "현재 미세먼지: " + dataE3 + dust_text
 	}
 </script>
 <script src="https://spreadsheets.google.com/feeds/cells/1JFXuZ-9FBg9aJEU1HOopKSLl3dnD2NI6UJ7XtBr2h3Q/2/public/basic?alt=json-in-script&callback=onDataLoaded"></script>
